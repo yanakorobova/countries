@@ -1,0 +1,17 @@
+@import 'src/common/scss/mixins';
+
+.wrapper {
+  @include flex(space-between, center);
+
+  .select {
+    width: 200px;
+    border-radius: var(--radii);
+    font-family: var(--family);
+    border: none;
+
+    option {
+      cursor: pointer;
+      color: var(--colors-text);
+    }
+  }
+}

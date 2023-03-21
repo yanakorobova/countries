@@ -1,0 +1,28 @@
+@import 'src/common/scss/mixins';
+
+.header {
+  width: 100%;
+  box-shadow: var(--shadow);
+  background-color: var(--colors-ui-base);
+
+  .container {
+    @include container();
+
+    .wrapper {
+      @include flex(space-between, center);
+      padding: 1rem 0;
+
+      & a {
+        text-decoration: none;
+        color: var(--colors-text);
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-bold);
+        &:visited {
+          color: black;
+        }
+      }
+    }
+  }
+
+}
+

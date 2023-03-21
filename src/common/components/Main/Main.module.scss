@@ -1,0 +1,7 @@
+@import "src/common/scss/mixins";
+.main{
+  padding: 4rem 0;
+  .container{
+    @include container();
+  }
+}
