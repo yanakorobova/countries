@@ -5,7 +5,6 @@
   padding: 1rem 2rem;
   border-radius: var(--radii);
   box-shadow: var(--shadow);
-  margin-bottom: 1rem;
   @include flex(flex-start, center);
 
   & input {
