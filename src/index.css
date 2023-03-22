@@ -17,14 +17,14 @@
     --radii: 0.5rem;
 }
 
-/*body[data-theme="dark"] {
+body[data-theme="Dark"] {
   --colors-text: hsl(0, 0%, 100%);
   --colors-bg: hsl(207, 26%, 17%);
   --colors-ui-base: hsl(209, 23%, 22%);
 
   --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
-}*/
-body {
+}
+body[data-theme="Light"] {
     --colors-text: hsl(200, 15%, 8%);
     --colors-bg: hsl(0, 0%, 98%);
     --colors-ui-base: hsl(0, 0%, 100%);
@@ -37,4 +37,11 @@ body {
     color: var(--colors-text);
     font-weight: var(--fw-light);
     background-color: var(--colors-bg);
+}
+
+h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
