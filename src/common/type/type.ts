@@ -16,3 +16,25 @@ export type CountriesType =  {
     error: string | null
     list: APIResponseType[]
 }
+type ICurrenciesType = {
+    code: string
+    name: string
+    symbol: string
+}
+
+type LanguagesType = {
+    [key: string]: string
+}
+export type DetailsResponseType ={
+    name: string
+    nativeName: string
+    flag:string
+    region: string
+    capital: string
+    population: number
+    subregion: string
+    topLevelDomain: string[]
+    currencies: ICurrenciesType[]
+    languages: LanguagesType[]
+    borders: string[]
+}
