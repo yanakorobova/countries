@@ -1,5 +1,5 @@
 import React from 'react';
-import s from 'common/components/Header/Header.module.scss'
+import s from './Header.module.scss'
 import {NavLink} from "react-router-dom";
 import {PATH} from "common/path/path";
 import {Theme} from "features/theme/Theme";
