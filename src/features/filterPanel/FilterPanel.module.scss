@@ -2,7 +2,10 @@
 
 .wrapper {
   @include flex(space-between, center, row, wrap);
-
+  @media(max-width: 560px){
+    @include flex(center, space-between, column);
+    gap: 2rem;
+  }
   .select {
     width: 200px;
     border-radius: var(--radii);
