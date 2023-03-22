@@ -7,6 +7,7 @@
   cursor: pointer;
   overflow: hidden;
   margin-bottom: 2rem;
+
   & img {
     display: block;
     width: 100%;
@@ -14,8 +15,8 @@
     object-fit: cover;
     object-position: center;
     box-shadow: var(--shadow);
-    @media(max-width: 1023px) and (min-width:400px){
-      height: 330px;
+    @media(max-width: 1023px) and (min-width: 390px) {
+      height: 250px;
     }
   }
 
