@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 import {IoSearch} from "react-icons/io5";
 import s from './Search.module.scss'
 
