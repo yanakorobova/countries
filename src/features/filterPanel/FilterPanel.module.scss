@@ -1,13 +1,17 @@
 @import 'src/common/scss/mixins';
 
 .wrapper {
-  @include flex(space-between, center,row,wrap);
+  @include flex(space-between, center, row, wrap);
 
   .select {
     width: 200px;
     border-radius: var(--radii);
     font-family: var(--family);
-    border:none;
+    border: none;
+
+    & * {
+      color: var(--colors-text) !important;
+    }
   }
 
 }
