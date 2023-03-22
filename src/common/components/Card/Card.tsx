@@ -8,6 +8,7 @@ import {useNavigate} from "react-router-dom";
 export const Card = () => {
     const navigate = useNavigate()
     const status = useAppSelector(state => state.countries.status)
+    const error = useAppSelector(state => state.countries.error)
     const {
         name,
         nativeName,
@@ -32,9 +33,10 @@ export const Card = () => {
     const onClickHandler = (name: string) => navigate(name)
 
     return (
-        <div className={s.cardContainer}>
-            {status === 'loading' ? <h2>Loading...</h2>
-                : <>
+        <>
+            {status === 'loading' ? <h2>Loading...</h2> :
+                error ? <h2>{error}</h2> :
+                <div className={s.cardContainer}>
                     <img src={flag} alt="img"/>
                     <div className={s.body}>
                         <p className={s.title}>{name}</p>
@@ -77,9 +79,9 @@ export const Card = () => {
                             )}
                         </div>
                     </div>
-                </>
+                </div>
             }
-        </div>
+        </>
     );
 };
 
