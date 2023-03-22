@@ -3,7 +3,7 @@ import s from './FilterPanel.module.scss'
 import {Search} from "common/components/Search/Search";
 import {useAppDispatch, useAppSelector} from "app/store";
 import {setRegion, setSearch} from "features/filterPanel/controls-slice";
-import Select from "react-select";
+import {CustomSelect} from "common/components/CustomSelect/CustomSelect";
 
 type OptionsMapValue = {
     value: string
@@ -22,6 +22,7 @@ const optionsMap: OptionsMapType = {
 
 const options = Object.values(optionsMap)
 
+
 export const FilterPanel = () => {
     const search = useAppSelector(state => state.controls.search)
     const region = useAppSelector(state => state.controls.region)
@@ -30,16 +31,16 @@ export const FilterPanel = () => {
         dispatch(setSearch({search: name}))
     }, [])
     const setRegionHandler = useCallback((region: any) => {
-        dispatch(setRegion({region: region.value}))
+        dispatch(setRegion({region: region?.value || ''}))
     }, [])
     return (
         <div className={s.wrapper}>
             <Search value={search} onChange={setSearchHandler}/>
-            <Select
+            <CustomSelect
                 options={options}
                 placeholder='Filter by Region'
                 isClearable
-                defaultValue={undefined}
+                defaultValue={''}
                 isSearchable={false}
                 value={optionsMap[region]}
                 onChange={setRegionHandler}
