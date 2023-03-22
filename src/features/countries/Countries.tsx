@@ -10,7 +10,7 @@ export const Countries = () => {
         selectAllCountries(state, state.controls.search, state.controls.region)
     )
     const status = useAppSelector(state => state.countries.status)
-
+    const error = useAppSelector(state => state.countries.error)
     useEffect(() => {
         dispatch(loadCountries())
     }, [])
@@ -22,6 +22,7 @@ export const Countries = () => {
     return (
         <>
             {status === 'loading' ? <h2>Loading...</h2> :
+                error ? <h2>{error}</h2> :
                 countries.length ? <div className={s.containerCountries}>
                     {mappedCountries}
                 </div> : <h2>Country not found. Change your search options</h2>
