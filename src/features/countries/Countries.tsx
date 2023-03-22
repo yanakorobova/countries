@@ -4,7 +4,7 @@ import {loadCountries, selectAllCountries} from "features/countries/countries-sl
 import {List} from "common/components/List/List";
 import s from './Countries.module.scss'
 
-export const Countries = () => {
+export const Countries = React.memo(() => {
     const dispatch = useAppDispatch()
     const countries = useAppSelector((state) =>
         selectAllCountries(state, state.controls.search, state.controls.region)
@@ -30,5 +30,5 @@ export const Countries = () => {
         </>
 
     );
-};
+});
 
