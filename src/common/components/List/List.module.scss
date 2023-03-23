@@ -15,7 +15,7 @@
     object-fit: cover;
     object-position: center;
     box-shadow: var(--shadow);
-    @media(max-width: 1023px) and (min-width: 390px) {
+    @media(max-width: 1023px) and (min-width: 360px) {
       height: 250px;
     }
   }
