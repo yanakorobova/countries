@@ -21,9 +21,9 @@ export const List: React.FC<DetailsTypeProps> = React.memo(({countries}) => {
             <div className={s.body}>
                 <b>{name}</b>
                 <ul>
-                    <li><b>Population: </b>{population}</li>
-                    <li><b>Region: </b>{region}</li>
                     <li><b>Capital: </b>{capital}</li>
+                    <li><b>Population: </b>{population.toLocaleString()}</li>
+                    <li><b>Region: </b>{region}</li>
                 </ul>
             </div>
         </div>

@@ -27,6 +27,10 @@
       list-style: none;
       margin: 0;
       padding: 1rem 0 0;
+      font-size: var(--fs-sm);
+      & li{
+        line-height: 1.3rem;
+      }
     }
   }
 }

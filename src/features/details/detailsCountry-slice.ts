@@ -34,7 +34,6 @@ export const getCountryByName = createAsyncThunk('details/getCountryByName',
         try {
             const res = await appAPI.getCountryByName(name)
             dispatch(setAppStatusAC({status: 'received'}))
-            console.log(res.data[0])
             return res.data[0]
         } catch (e) {
             //@ts-ignore

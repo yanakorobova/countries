@@ -31,19 +31,20 @@ export const Card = () => {
         }
     }, [dispatch, borders])
     const onClickHandler = (name: string) => navigate(name)
-
     return (
         <>
             {status === 'loading' ? <h2>Loading...</h2> :
                 error ? <h2>{error}</h2> :
                 <div className={s.cardContainer}>
-                    <img src={flag} alt="img"/>
+                    <div className={s.test}>
+                        <img src={flag} alt="img"/>
+                    </div>
                     <div className={s.body}>
                         <p className={s.title}>{name}</p>
                         <div className={s.information}>
                             <ul>
                                 <li><b>Native name: </b>{nativeName}</li>
-                                <li><b>Population: </b>{population}</li>
+                                <li><b>Population: </b>{ population?.toLocaleString()}</li>
                                 <li><b>Region: </b>{region}</li>
                                 <li><b>Sub Region: </b>{subregion}</li>
                                 <li><b>Capital: </b>{capital}</li>
