@@ -32,7 +32,7 @@ export const Card = () => {
     }, [dispatch, borders])
     const onClickHandler = (name: string) => navigate(name)
     return (
-        <>
+        <div className={s.card}>
             {status === 'loading' ? <h2>Loading...</h2> :
                 error ? <h2>{error}</h2> :
                 <div className={s.cardContainer}>
@@ -47,7 +47,7 @@ export const Card = () => {
                                 <li><b>Population: </b>{ population?.toLocaleString()}</li>
                                 <li><b>Region: </b>{region}</li>
                                 <li><b>Sub Region: </b>{subregion}</li>
-                                <li><b>Capital: </b>{capital}</li>
+                                <li><b>Capital: </b>{capital? capital: '-'}</li>
                             </ul>
                             <ul>
                                 <li><b>Top Level Domain: </b>{topLevelDomain.map((d) => (
@@ -82,7 +82,7 @@ export const Card = () => {
                     </div>
                 </div>
             }
-        </>
+        </div>
     );
 };
 

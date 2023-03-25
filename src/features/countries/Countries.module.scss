@@ -1,7 +1,8 @@
 .containerCountries {
   display: grid;
-  grid-template-columns:  repeat(auto-fill, minmax(258px, 1fr));
-  gap: 2rem;
+  grid-template-columns:  repeat(auto-fill, minmax(246px, 1fr));
+  gap: 3rem;
+  row-gap: 2rem;
   margin-top: 2rem;
   @media (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
