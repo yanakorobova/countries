@@ -65,6 +65,10 @@
             box-shadow: var(--shadow);
             line-height: 1.5;
             cursor: pointer;
+            &:hover{
+              background-color: #c0f5c9;
+              box-shadow: rgb(145, 180, 150) 0 0 8px;
+            }
           }
         }
       }

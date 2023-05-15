@@ -59,7 +59,7 @@ export const Card = () => {
                                 ))}
                                 </li>
                                 <li><b>Languages: </b>{languages.map(l => (
-                                    <span key={l.code}>{l.name} </span>
+                                    <span key={l.name}>{l.name} </span>
                                 ))}</li>
                             </ul>
                         </div>

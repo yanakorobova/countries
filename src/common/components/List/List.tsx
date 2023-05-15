@@ -17,7 +17,7 @@ export const List: React.FC<DetailsTypeProps> = React.memo(({countries}) => {
     )
     return (
         <div className={s.container} onClick={onClickHandler(`/country/${name}`)}>
-            <img src={flags.svg} alt={'img'}/>
+            <img src={flags.png} alt={'img'}/>
             <div className={s.body}>
                 <b>{name}</b>
                 <ul>

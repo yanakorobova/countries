@@ -1,6 +1,6 @@
 export type StatusType = 'loading' | 'received' | 'rejected' | 'idle'
 
-export type APIResponseType =  {
+export type APIResponseType = {
     flags: {
         svg: string
         png: string
@@ -11,7 +11,7 @@ export type APIResponseType =  {
     capital: string
 }
 
-export type CountriesType =  {
+export type CountriesType = {
     status: StatusType
     error: string | null
     list: APIResponseType[]
@@ -25,10 +25,14 @@ type ICurrenciesType = {
 type LanguagesType = {
     [key: string]: string
 }
-export type DetailsResponseType ={
+type FlagsType = {
+    svg: string
+    png: string
+}
+export type DetailsResponseType = {
     name: string
     nativeName: string
-    flag:string
+    flag: string
     region: string
     capital: string
     population: number
@@ -37,4 +41,5 @@ export type DetailsResponseType ={
     currencies: ICurrenciesType[]
     languages: LanguagesType[]
     borders: string[]
+    flags: FlagsType
 }
